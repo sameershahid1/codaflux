@@ -3,10 +3,20 @@
 @tailwind utilities;
 
 .light-shadow:focus,
-.light-shadow:hover {
-  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+.light-shadow:hover,
+.light-shadow-normal {
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .light-shadow-md:hover {
   box-shadow: 2px 1px 7px 1px rgba(0, 0, 0, 0.23);
+}
+
+.light-shadow-arrow {
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.light-blue-shadow:hover,
+.light-blue-shadow:focus {
+  box-shadow: 0 0 6px 1px rgb(71, 175, 198);
 }

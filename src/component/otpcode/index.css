@@ -1,0 +1,21 @@
+/* Hide the number input field arrows */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  display: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@media screen and (max-width: 404px) {
+  .custom-width-1 {
+    width: 95vw;
+  }
+
+  .custom-width-2 {
+    width: 20vw !important;
+  }
+}

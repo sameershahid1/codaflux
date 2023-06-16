@@ -1,0 +1,6 @@
+@media screen and (max-width: 404px) {
+  .custom-width-1 {
+    width: 95vw;
+    padding-left: 0.2rem;
+  }
+}

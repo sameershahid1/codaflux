@@ -1,0 +1,11 @@
+@media screen and (max-width: 414px) {
+  .custom-margin-top-1 {
+    margin-top: 5rem !important;
+  }
+}
+
+@media screen and (max-width: 404px) {
+  .custom-width-1 {
+    width: 95vw;
+  }
+}

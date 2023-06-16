@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { Routes, Route } from 'react-router-dom';
 
+import Registration from './component/registration';
+
 import Signup from './page/signup';
 import Login from './component/login';
 
 import Logo from './assets/images/logo.png'
+import OtpCode from './component/otpcode';
+import PasswordEmail from './component/passwordemail'
+import VerifyEmail from './component/verifyemail';
 
 
 const App = () => {
@@ -27,10 +32,10 @@ const App = () => {
           <Routes>
             <Route path='/' element={<Signup />}>
               <Route index element={<Login />}></Route>
-              <Route path='/registration' element={<p className='text-2xl font-bold text-center'>Registration</p>}></Route>
-              <Route path='/otp-code' element={<p className='text-2xl font-bold text-center'>OTP Code</p>}></Route>
-              <Route path='/password-email' element={<p className='text-2xl font-bold text-center'>Password email</p>}></Route>
-              <Route path='/verify-email' element={<p className='text-2xl font-bold text-center'>Verify Email</p>}></Route>
+              <Route path='/registration' element={<Registration />}></Route>
+              <Route path='/otp-code' element={<OtpCode />}></Route>
+              <Route path='/password-email' element={<PasswordEmail />}></Route>
+              <Route path='/verify-email' element={<VerifyEmail />}></Route>
               <Route path='/forgot-password' element={<p className='text-2xl font-bold text-center'>Forgot Password</p>}></Route>
             </Route>
             <Route path='/dashboard' element={<p className='text-2xl font-bold text-center'>DashBoard</p>} ></Route>
