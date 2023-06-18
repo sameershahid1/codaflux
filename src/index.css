@@ -8,6 +8,10 @@
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
+.light-shadow-normal-1 {
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
 .light-shadow-md:hover {
   box-shadow: 2px 1px 7px 1px rgba(0, 0, 0, 0.23);
 }

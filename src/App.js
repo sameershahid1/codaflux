@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Routes, Route } from 'react-router-dom';
 
 import Registration from './component/registration';
@@ -10,6 +10,8 @@ import Logo from './assets/images/logo.png'
 import OtpCode from './component/otpcode';
 import PasswordEmail from './component/passwordemail'
 import VerifyEmail from './component/verifyemail';
+import DashBoard from './page/dashboard';
+import Transaction from './component/transaction';
 
 
 const App = () => {
@@ -38,7 +40,9 @@ const App = () => {
               <Route path='/verify-email' element={<VerifyEmail />}></Route>
               <Route path='/forgot-password' element={<p className='text-2xl font-bold text-center'>Forgot Password</p>}></Route>
             </Route>
-            <Route path='/dashboard' element={<p className='text-2xl font-bold text-center'>DashBoard</p>} ></Route>
+            <Route path='/dashboard' element={<DashBoard />}>
+              <Route index element={<Transaction />}></Route>
+            </Route>
           </Routes>
       }
     </>

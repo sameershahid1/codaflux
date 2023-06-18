@@ -1,0 +1,7 @@
+.MuiTabs-indicator {
+  display: none;
+}
+
+.img-color-white {
+  filter: brightness(0) invert(1);
+}

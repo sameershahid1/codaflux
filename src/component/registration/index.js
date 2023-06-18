@@ -1,9 +1,10 @@
 import { Link, useNavigate } from 'react-router-dom'
-import React from 'react'
+
+import './index.css'
 
 import Logo from '../../assets/images/logo.png';
 
-import './index.css'
+
 
 const Registration = () => {
     const navigate = useNavigate();
