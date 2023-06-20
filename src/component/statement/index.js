@@ -30,7 +30,7 @@ const Statement = ({ handleValue }) => {
     ];
 
     const handleTransaction = () => {
-        handleValue(0)
+        handleValue(8)
     }
 
     return (

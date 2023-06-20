@@ -14,6 +14,7 @@ import AccountOverview from '../../component/accountoverview';
 import AddBankAccount from '../../component/addbankaccount';
 import ProfileList from '../../component/profilelist';
 import Profile from '../../component/profile';
+import BankDetail from '../../component/bankdetail';
 
 
 const current_width = window.innerWidth
@@ -114,6 +115,9 @@ const DashBoard = () => {
                 </TabPanel>
                 <TabPanel value={value} index={7}>
                     <Profile />
+                </TabPanel>
+                <TabPanel value={value} index={8}>
+                    <BankDetail />
                 </TabPanel>
             </Box>
         </div>
