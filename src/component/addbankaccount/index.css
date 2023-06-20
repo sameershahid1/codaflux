@@ -1,0 +1,43 @@
+@media screen and (width<=972px) {
+  .account-width {
+    width: 94vw !important;
+  }
+}
+
+@media screen and (width<=644px) {
+  .account-width {
+    width: 93vw !important;
+  }
+}
+
+@media screen and (width<=638px) {
+  .info-space-1 {
+    gap: 0.21rem !important;
+  }
+  .info-space-container {
+    gap: 0.7rem !important;
+  }
+}
+
+@media screen and (width<=578px) {
+  .accounts-header-container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (width<=504px) {
+  .account-width {
+    width: 89vw !important;
+  }
+}
+
+@media screen and (width<=504px) {
+  .title-text {
+    text-align: center;
+    font-size: 20px !important;
+  }
+  .info-space-1 {
+    flex-direction: column !important;
+  }
+}
+

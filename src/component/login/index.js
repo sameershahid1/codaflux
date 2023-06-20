@@ -1,14 +1,13 @@
-import React from 'react'
-import { Switch } from '@mui/material';
-import { Link } from 'react-router-dom';
-import Divider from '@mui/material/Divider';
+import { Switch } from '@mui/material'
+import { Link, useNavigate } from 'react-router-dom'
+import Divider from '@mui/material/Divider'
 
 import './index.css'
 
 import GoogleIcon from '../../assets/images/google.png'
 import FacebookIcon from '../../assets/images/facebook.png'
 import AppleIcon from '../../assets/images/apple.png'
-import Logo from '../../assets/images/logo.png';
+import Logo from '../../assets/images/logo.png'
 
 
 const customSwitchStyle = {
@@ -23,6 +22,11 @@ const signUpEmails = [
 
 
 const Login = () => {
+    const navigate = useNavigate()
+    const loginHandler = () => {
+        navigate('/dashboard')
+    }
+
     return (
         <div className='flex items-center justify-center custom-width-1'>
             <div className='flex flex-col justify-start gap-3 mt-36 w-96 custom-width-1' >
@@ -46,7 +50,7 @@ const Login = () => {
                         <Link className='text-[#47AEC6] font-medium text-[16px]' to='/password-email'>Forgot Password?</Link>
                     </div>
                     <div className='flex items-center custom-width-1'>
-                        <button type='button' className='bg-[#314153] text-white w-screen h-12 rounded-lg font-semibold light-shadow-md'>Sign in</button>
+                        <button onClick={loginHandler} type='button' className='bg-[#314153] text-white w-screen h-12 rounded-lg font-semibold light-shadow-md'>Sign in</button>
                     </div>
                 </form>
                 <div className='mt-2 mb-2 custom-width-1'>

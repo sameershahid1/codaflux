@@ -1,0 +1,17 @@
+@media screen and (width<=972px) {
+  .balance-width {
+    width: 95vw !important;
+  }
+}
+
+@media screen and (width<=644px) {
+  .balance-width {
+    width: 93vw !important;
+  }
+}
+
+@media screen and (width<=504px) {
+  .balance-width {
+    width: 89vw !important;
+  }
+}

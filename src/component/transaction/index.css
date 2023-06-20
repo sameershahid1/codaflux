@@ -1,0 +1,14 @@
+@media screen and (max-width: 972px) {
+  .dashboard-width {
+    width: 80vw !important;
+  }
+  .table-width {
+    width: 90vw !important;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .search-width {
+    width: 40vw !important;
+  }
+}

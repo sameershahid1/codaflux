@@ -1,0 +1,8 @@
+@media screen and (width<=595px) {
+  .profile-search-width {
+    width: 40vw !important;
+  }
+}
+
+
+

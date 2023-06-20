@@ -1,0 +1,35 @@
+@media screen and (width<=972px) {
+  .detail-width {
+    width: 95vw;
+  }
+}
+
+/* @media screen and (width<=861px) {
+  .detail-width {
+    width: 93vw;
+  }
+}
+
+@media screen and (width<=753px) {
+  .payment-detail {
+    width: 60vw;
+  }
+}
+
+@media screen and (width<=649px) {
+  .detail-width {
+    width: 90vw;
+  }
+}
+
+@media screen and (width<=583px) {
+  .payment-detail {
+    width: 65vw;
+  }
+}
+
+@media screen and (width<=445px) {
+  .detail-width {
+    width: 89vw;
+  }
+} */

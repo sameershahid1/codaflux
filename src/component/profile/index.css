@@ -1,0 +1,35 @@
+@media screen and (width<=972px) {
+  .profile-container {
+    width: 94vw;
+  }
+}
+
+@media screen and (width<=719px) {
+  .profile-img-width {
+    width: 20vw !important;
+  }
+  .data-sperator-1 {
+    width: 70vw !important;
+  }
+}
+
+@media screen and (width<=645px) {
+  .profile-header-container {
+    flex-direction: column !important;
+  }
+}
+
+@media screen and (width<=495px) {
+  .profile-img-width {
+    width: 30vw !important;
+  }
+  .profile-img {
+    flex-direction: column !important;
+  }
+}
+
+@media screen and (width<=495px) {
+  .profile-container {
+    width: 90vw;
+  }
+}
