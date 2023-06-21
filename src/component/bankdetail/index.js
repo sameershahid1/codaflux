@@ -10,10 +10,12 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 
+import CalendarIcon from "../../assets/images/calendar.png";
 
+import './index.css'
 
-function createData(id, bankHolder, name, cashType, date,amount) {
-    return {id, bankHolder, name, cashType, date,amount};
+function createData(id, bankHolder, name, cashType, date, amount) {
+    return { id, bankHolder, name, cashType, date, amount };
 }
 
 let oldData = [
@@ -59,12 +61,20 @@ const BankDetail = () => {
                 {breadcrumbs}
             </Breadcrumbs>
             <div className="flex flex-col gap-10  border rounded-lg bg-[#FFFFFF] p-7 mt-4 balance-width">
-                <div className="flex justify-between items-center">
-                    <p className='text-[#667085]'>Today Transactions</p>
-                    <select className='pt-2 pb-2 w-24 text-center rounded-md light-shadow-normal-1'>
-                        <option value={"today"}>Today</option>
+                <div className="flex justify-between items-center bank-detail-width">
+                    <select className='text-[#101828] outline-none cursor-pointer pt-2 pb-2 w-80 rounded-md light-shadow-normal-1'>
+                        <option value={"today"}>
+                            DE89370400440532013000
+                        </option>
                     </select>
+                    <div className="flex items-center cursor-pointer gap-3 border bg-[#FFFFFF] p-2 ps-4 pr-4 rounded-lg light-shadow-normal-1">
+                        <img className="w-[20px]" src={CalendarIcon} alt="calendar-icon" />
+                        <p className="text-[14px] text-[#344054] font-semibold">
+                            Jan 1,2023-Jan 31,2023
+                        </p>
+                    </div>
                 </div>
+
                 <div className="bg-[#47AEC6] flex flex-col gap-2 pt-6 pb-6 ps-7 rounded-2xl">
                     <h1 className="text-[30px] font-medium text-white">Account Summary</h1>
                     <div className="flex gap-7 items-center">
@@ -80,7 +90,7 @@ const BankDetail = () => {
                 </div>
                 <div className="flex justify-between items-center">
                     <p className='text-[#101828] font-semibold text-[20px]'>Statement</p>
-                    <button type="button" className="p-2 pl-3 pr-3 light-shadow-normal rounded-lg">
+                    <button type="button" className="text-[#344054] p-2 pl-3 pr-3 light-shadow-normal rounded-lg">
                         <GetAppIcon />
                         <span>Export</span>
                     </button>

@@ -24,7 +24,7 @@ const pageSize = 7;
 let idSaver = 0;
 
 
-const Balance = ({ oldData }) => {
+const Balance = ({ oldData,handleValue }) => {
   const breadcrumbs = [
     <Link key="1" className="text-gray-900 font-semibold" to="/dashboard">
       Home
@@ -86,7 +86,7 @@ const Balance = ({ oldData }) => {
       <div className="flex flex-col gap-10  border rounded-lg bg-[#FFFFFF] p-7 mt-4 balance-width">
         <div className="bg-[#47AEC6] flex flex-col gap-2 pt-6 pb-6 ps-7 rounded-2xl">
           <h1 className="text-[30px] font-medium text-white">56,6900.67</h1>
-          <div className="flex justify-center cursor-pointer gap-4 items-center border  pt-3 pb-3 pr-2 ps-2 rounded-lg w-48">
+          <div onClick={()=>{handleValue(2)}} className="flex justify-center cursor-pointer gap-4 items-center border  pt-3 pb-3 pr-2 ps-2 rounded-lg w-48">
             <img className="w-4" src={StatementIcon} alt="statement-icon" />
             <span className="text-white text-[14px]">Monthly Statement</span>
           </div>

@@ -48,7 +48,7 @@ const AddBankAccount = () => {
                 activate.modal ?
                     <div class="m-auto fixed inset-0 z-50 flex items-center justify-center w-[39vw]">
                         <div class="fixed inset-0 bg-[#353B38] opacity-75"></div>
-                        <div class="relative bg-white p-8 pt-4 rounded-2xl shadow-lg">
+                        <div class="relative bg-white p-8 pt-4 rounded-2xl light-shadow-normal-1">
                             <div onClick={() => { setActivate({ modal: false, switch: false }) }} class="flex justify-end cursor-pointer">
                                 <CloseIcon sx={{ color: '#98A2B3' }} />
                             </div>

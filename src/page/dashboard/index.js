@@ -99,7 +99,7 @@ const DashBoard = () => {
                     {transactionDetail.activate ? <TransactionDetail data={transactionDetail.data} /> : <Transaction oldData={[...rows]} handleTransactionView={handleTransactionView} />}
                 </TabPanel>
                 <TabPanel value={value} index={1}>
-                    <Balance oldData={[...rows]} />
+                    <Balance oldData={[...rows]} handleValue={handleValue} />
                 </TabPanel>
                 <TabPanel value={value} index={2}>
                     <Statement handleValue={handleValue} />

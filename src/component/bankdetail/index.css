@@ -1,0 +1,7 @@
+@media screen and (width<=652px) {
+  .bank-detail-width {
+    /* flex-direction: column;
+    justify-content:space-between;   */
+    flex-wrap: wrap;
+  }
+}

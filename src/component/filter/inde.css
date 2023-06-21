@@ -1,0 +1,110 @@
+@media screen and (width<=1514px) {
+  .filter-list-container {
+    gap: 1rem !important;
+  }
+  .filter-select-width {
+    width: 10vw !important;
+  }
+
+  .filter-container {
+    width: 35vw !important;
+  }
+}
+
+@media screen and (width<=1270px) {
+  .filter-container {
+    width: 37vw !important;
+  }
+  .filter-select-width {
+    width: 10vw !important;
+  }
+}
+
+@media screen and (width<=1153px) {
+  .filter-container {
+    width: 42vw !important;
+    left: 18.5rem !important;
+  }
+  .filter-select-width {
+    width: 12vw !important;
+  }
+}
+
+@media screen and (width<=1031px) {
+  .filter-container {
+    width: 46vw !important;
+    left: 17rem !important;
+  }
+  .filter-select-width {
+    width: 13vw !important;
+  }
+}
+
+@media screen and (width<=1024px) {
+  .filter-container {
+    left: 4.5rem !important;
+  }
+}
+
+@media screen and (width<=881px) {
+  .filter-container {
+    width: 53vw !important;
+  }
+  .filter-select-width {
+    width: 15vw !important;
+  }
+}
+
+@media screen and (width<=768px) {
+  .filter-container {
+    width: 61vw !important;
+  }
+  .filter-select-width {
+    width: 17vw !important;
+  }
+}
+
+@media screen and (width<=674px) {
+  .filter-container {
+    width: 74vw !important;
+  }
+  .filter-select-width {
+    width: 21vw !important;
+  }
+}
+
+@media screen and (width<=556px) {
+  .filter-container {
+    width: 88vw !important;
+    left: 2rem !important;
+  }
+  .filter-select-width {
+    width: 25vw !important;
+  }
+}
+
+@media screen and (width<=460px) {
+  .filter-container {
+    overflow: scroll !important;
+    min-height: 372px !important;
+    max-height: 372px !important;
+  }
+
+  .filter-list-container {
+    flex-wrap: wrap !important;
+  }
+
+  .filter-select-width {
+    width: 60vw !important;
+  }
+
+  .filter {
+    flex-direction: row !important;
+  }
+}
+
+@media screen and (width<=375px) {
+  .filter-container {
+    top: 14rem !important;
+  }
+}

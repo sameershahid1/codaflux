@@ -59,7 +59,7 @@ const Statement = ({ handleValue }) => {
                         />
                     </div>
 
-                    <div className="flex items-center gap-3 border bg-[#FFFFFF] p-2 ps-4 pr-4 rounded-lg light-shadow-normal-1">
+                    <div className="flex cursor-pointer items-center gap-3 border bg-[#FFFFFF] p-2 ps-4 pr-4 rounded-lg light-shadow-normal-1">
                         <img className="w-[20px]" src={CalendarIcon} alt="calendar-icon" />
                         <p className='text-[14px] text-[#344054] font-semibold'>Jan 1,2023-Jan 31,2023</p>
                     </div>

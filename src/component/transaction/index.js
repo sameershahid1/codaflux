@@ -21,12 +21,13 @@ import IconButton from "@mui/material/IconButton";
 
 import "./index.css";
 
+import Filter from "../filter";
+
 const pageSize = 7;
 const options = ["View", "Delete"];
 
 const ITEM_HEIGHT = 48;
 let idSaver = 0;
-
 
 const Transaction = ({ oldData, handleTransactionView }) => {
   const [pagination, setPagination] = useState({
@@ -36,6 +37,7 @@ const Transaction = ({ oldData, handleTransactionView }) => {
     data: oldData.slice(0, pageSize),
     oldData: [...oldData],
   });
+  const [isFilter, setIsFilter] = useState(false);
   const breadcrumbs = [
     <Link
       key="1"
@@ -51,11 +53,15 @@ const Transaction = ({ oldData, handleTransactionView }) => {
 
   const handlePageChange = (e, page) => {
     const from = (page - 1) * pageSize;
-    const to = ((page - 1) * pageSize) + pageSize;
+    const to = (page - 1) * pageSize + pageSize;
     const data = pagination.rows.slice(from, to);
     setPagination((prev) => {
       return { ...prev, from: from, to: to, data: [...data] };
     });
+  };
+
+  const handleFilterClose = (data) => {
+    setIsFilter(data);
   };
 
   const [anchorEl, setAnchorEl] = useState(null);
@@ -76,13 +82,14 @@ const Transaction = ({ oldData, handleTransactionView }) => {
         ...prev,
         count: rows.length,
         data: [...data],
-        oldData: [ ...rows ],
+        oldData: [...rows],
       };
     });
   };
 
   return (
     <div className="flex flex-col justify-center gap-5 w-[76vw] dashboard-width">
+      {isFilter && <Filter handleClose={handleFilterClose} />}
       <h2 className="text-[#1C1F28] font-semibold text-2xl">Transactions</h2>
       <Breadcrumbs
         separator={<NavigateNextIcon fontSize="small" />}
@@ -104,15 +111,20 @@ const Transaction = ({ oldData, handleTransactionView }) => {
               placeholder="Search for Statement"
             />
             <FilterListIcon
+              onMouseOver={() => {
+                setIsFilter(true);
+              }}
               sx={{
                 color: "#667085",
               }}
             />
           </div>
 
-          <div className="flex items-center gap-3 border bg-[#FFFFFF] p-2 ps-4 pr-4 rounded-lg light-shadow-normal-1">
+          <div className="flex cursor-pointer items-center gap-3 border bg-[#FFFFFF] p-2 ps-4 pr-4 rounded-lg light-shadow-normal-1">
             <img className="w-[20px]" src={CalendarIcon} alt="calendar-icon" />
-            <p className='text-[14px] text-[#344054] font-semibold'>Jan 1,2023-Jan 31,2023</p>
+            <p className="text-[14px] text-[#344054] font-semibold">
+              Jan 1,2023-Jan 31,2023
+            </p>
           </div>
         </div>
         <TableContainer>
@@ -152,11 +164,25 @@ const Transaction = ({ oldData, handleTransactionView }) => {
                     />
                   </TableCell>
                   <TableCell component="th" scope="row">
-                    <span className='text-[#262526] font-semibold'>{row.name}</span>
+                    <span className="text-[#262526] font-semibold">
+                      {row.name}
+                    </span>
                   </TableCell>
-                  <TableCell><span className='text-[#262526] font-semibold'>{row.calories}</span></TableCell>
-                  <TableCell><span className='text-[#262526] font-semibold'>{row.fat}</span></TableCell>
-                  <TableCell><span className='text-[#262526] font-semibold'>{row.carbs}</span></TableCell>
+                  <TableCell>
+                    <span className="text-[#262526] font-semibold">
+                      {row.calories}
+                    </span>
+                  </TableCell>
+                  <TableCell>
+                    <span className="text-[#262526] font-semibold">
+                      {row.fat}
+                    </span>
+                  </TableCell>
+                  <TableCell>
+                    <span className="text-[#262526] font-semibold">
+                      {row.carbs}
+                    </span>
+                  </TableCell>
                   <TableCell
                     onClick={() => {
                       idSaver = row.id;
