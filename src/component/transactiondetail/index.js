@@ -6,9 +6,11 @@ import SuccessIcon from '../../assets/images/success.png'
 
 import './index.css'
 
-const TransactionDetail = ({ data }) => {
+const TransactionDetail = ({ data, handleValue }) => {
     const breadcrumbs = [
-        <Link key="1" className='text-base font-medium text-gray-900 ' to='/dashboard'>
+        <Link key="1" className='text-base font-medium text-gray-900 '
+            onClick={() => { handleValue(6) }}
+            to='/dashboard'>
             Home
         </Link>,
         <Link key="1" className='text-base font-medium text-gray-900 ' to='/dashboard'>

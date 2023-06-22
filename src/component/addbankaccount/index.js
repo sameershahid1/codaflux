@@ -23,14 +23,16 @@ const oldRows = [
     createData(4, BanquImg, 'Bank Banque J.VanBreda & C', 'Mohid', 'BE74 0634 8461 8907', 24.09),
 ];
 
-const AddBankAccount = () => {
+const AddBankAccount = ({ handleValue }) => {
     const [bankInformation, setBankInformation] = useState({ ...oldRows[0] })
     const [activate, setActivate] = useState({
         modal: false,
         switch: false,
     })
     const breadcrumbs = [
-        <Link key="1" className="text-gray-900 font-semibold" to="/dashboard">
+        <Link key="1" className="text-gray-900 font-semibold"
+            onClick={() => { handleValue(6) }}
+            to="/dashboard">
             Home
         </Link>,
         <Link key="1" className="text-gray-900 font-semibold" to="/dashboard">
@@ -125,8 +127,8 @@ const AddBankAccount = () => {
                             return (
                                 <div onClick={() => {
                                     setBankInformation({ ...element })
-                                }} 
-                                className='border-b cursor-pointer border-[#EAECF0] pb-4 flex justify-between items-center bank-flex-column'>
+                                }}
+                                    className='border-b cursor-pointer border-[#EAECF0] pb-4 flex justify-between items-center bank-flex-column'>
                                     <div className='flex items-center gap-4'>
                                         <img className='w-16' src={element.src} alt={'bank-img'} />
                                         <p className='text-[#262526] font-medium'>{element.bankName}</p>

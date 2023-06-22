@@ -29,7 +29,7 @@ const options = ["View", "Delete"];
 const ITEM_HEIGHT = 48;
 let idSaver = 0;
 
-const Transaction = ({ oldData, handleTransactionView }) => {
+const Transaction = ({ oldData, handleTransactionView, handleValue }) => {
   const [pagination, setPagination] = useState({
     count: oldData.length,
     from: 0,
@@ -41,8 +41,9 @@ const Transaction = ({ oldData, handleTransactionView }) => {
   const breadcrumbs = [
     <Link
       key="1"
-      className="text-base font-medium text-gray-900 "
+      className="font-semibold text-base font-medium text-gray-900 "
       to="/dashboard"
+      onClick={() => { handleValue(6) }}
     >
       Home
     </Link>,

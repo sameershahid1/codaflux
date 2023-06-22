@@ -48,7 +48,7 @@ let rows = [
 
 
 const DashBoard = () => {
-    const [value, setValue] = useState(0);
+    const [value, setValue] = useState(6);
     const [isDrawerOpen, setIsDrawerOpen] = useState(false)
     const [isDrawerActivate, setIsDrawerActivate] = useState(drawer)
     const [transactionDetail, setTransactionDetail] = useState({ activate: false, data: {} })
@@ -96,7 +96,8 @@ const DashBoard = () => {
 
 
                 <TabPanel value={value} index={0}>
-                    {transactionDetail.activate ? <TransactionDetail data={transactionDetail.data} /> : <Transaction oldData={[...rows]} handleTransactionView={handleTransactionView} />}
+                    {transactionDetail.activate ? <TransactionDetail handleValue={handleValue} data={transactionDetail.data} /> :
+                        <Transaction handleValue={handleValue} oldData={[...rows]} handleTransactionView={handleTransactionView} />}
                 </TabPanel>
                 <TabPanel value={value} index={1}>
                     <Balance oldData={[...rows]} handleValue={handleValue} />
@@ -108,16 +109,16 @@ const DashBoard = () => {
                     <AccountOverview handleValue={handleValue} />
                 </TabPanel>
                 <TabPanel value={value} index={5}>
-                    <AddBankAccount />
+                    <AddBankAccount handleValue={handleValue}/>
                 </TabPanel>
                 <TabPanel value={value} index={6}>
                     <ProfileList handleValue={handleValue} />
                 </TabPanel>
                 <TabPanel value={value} index={7}>
-                    <Profile />
+                    <Profile handleValue={handleValue}/>
                 </TabPanel>
                 <TabPanel value={value} index={8}>
-                    <BankDetail />
+                    <BankDetail handleValue={handleValue} />
                 </TabPanel>
             </Box>
         </div>

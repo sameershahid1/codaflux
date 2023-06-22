@@ -27,9 +27,11 @@ let oldData = [
 const pageSize = 7;
 
 
-const BankDetail = () => {
+const BankDetail = ({ handleValue }) => {
     const breadcrumbs = [
-        <Link key="1" className="text-gray-900 font-semibold" to="/dashboard">
+        <Link key="1" className="text-gray-900 font-semibold"
+            onClick={() => { handleValue(6) }}
+            to="/dashboard">
             Home
         </Link>,
         <Link key="1" className="text-gray-900 font-semibold" to="/dashboard">

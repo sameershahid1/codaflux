@@ -40,7 +40,9 @@ const AccountOverview = ({ handleValue }) => {
         createData(4, BanquImg, 'Bank Banque J.VanBreda & C', 'Mohid', 'BE74 0634 8461 8907', 24.09),
     ];
     const breadcrumbs = [
-        <Link key="1" className="text-gray-900 font-semibold" to="/dashboard">
+        <Link key="1" className="text-gray-900 font-semibold"
+            onClick={() => { handleValue(6) }}
+            to="/dashboard">
             Home
         </Link>,
         <p key="3" className="text-[#98A2B3]">
