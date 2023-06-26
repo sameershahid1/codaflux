@@ -133,6 +133,9 @@ const AccountOverview = ({ handleValue }) => {
                                 <TableCell key={2} sx={{ color: "#667085" }}>
                                     Bank Name
                                 </TableCell>
+                                <TableCell key={4} sx={{ color: "#667085" }}>
+                                    Name
+                                </TableCell>
                                 <TableCell key={3} sx={{ color: "#667085" }}>
                                     Account Holder
                                 </TableCell>
@@ -154,6 +157,7 @@ const AccountOverview = ({ handleValue }) => {
                                         <img className='w-14' src={row.src} alt='back-img' />
                                         <span className='text-[#262526] font-semibold'>{row.bankName}</span>
                                     </TableCell>
+                                    <TableCell><span className='text-[#262526] font-semibold'>Bilawal</span></TableCell>
                                     <TableCell><span className='text-[#262526] font-semibold'>{row.accountHolder}</span></TableCell>
                                     <TableCell><span className='text-[#262526] font-semibold'>{row.accountNumber}</span></TableCell>
                                     <TableCell><span className='text-[#262526] font-semibold'>{row.amount} USD</span></TableCell>

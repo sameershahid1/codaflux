@@ -86,9 +86,6 @@ const ProfileList = ({ handleValue }) => {
                                 <TableCell key={3} sx={{ color: "#667085" }}>
                                     Email Address
                                 </TableCell>
-                                <TableCell key={4} sx={{ color: "#667085" }}>
-                                    Account Number
-                                </TableCell>
                                 <TableCell key={5} sx={{ color: "#667085" }}>
                                     Mobile Number
                                 </TableCell>
@@ -105,7 +102,6 @@ const ProfileList = ({ handleValue }) => {
                                         <span className='text-[#262526] font-semibold'>{row.name}</span>
                                     </TableCell>
                                     <TableCell><span className='text-[#262526] font-semibold'>{row.email}</span></TableCell>
-                                    <TableCell><span className='text-[#262526] font-semibold'>{row.accountNumber}</span></TableCell>
                                     <TableCell><span className='text-[#262526] font-semibold'>{row.phone}</span></TableCell>
                                 </TableRow>
                             ))}
