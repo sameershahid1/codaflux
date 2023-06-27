@@ -27,7 +27,7 @@ const Profile = ({ handleValue }) => {
     return (
         <div className="flex flex-col justify-center gap-3 w-[81vw] dashboard-width ">
             <h1 className="text-[24px] font-semibold text-[#1C1F28]">
-                Balance Information
+                Profile Detail
             </h1>
             <Breadcrumbs
                 separator={<NavigateNextIcon fontSize="small" />}

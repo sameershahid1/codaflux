@@ -7,6 +7,10 @@ import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
+import IconButton from "@mui/material/IconButton";
 
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import SearchIcon from "@mui/icons-material/Search";
@@ -28,7 +32,8 @@ let oldData = [
 ];
 
 const pageSize = 7;
-
+const options = ["View"];
+const ITEM_HEIGHT = 48;
 
 const ProfileList = ({ handleValue }) => {
     const breadcrumbs = [
@@ -49,11 +54,26 @@ const ProfileList = ({ handleValue }) => {
         oldData: [...oldData],
     });
 
+    const handleView = () => {
+        handleValue(7)
+    }
+
+    const [anchorEl, setAnchorEl] = useState(null);
+    const open = Boolean(anchorEl);
+
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
 
     return (
         <div className="flex flex-col justify-center gap-3 w-[81vw] dashboard-width">
             <h1 className="text-[24px] font-semibold text-[#1C1F28]">
-                Balance Information
+                Clients Overview
             </h1>
             <Breadcrumbs
                 separator={<NavigateNextIcon fontSize="small" />}
@@ -89,20 +109,59 @@ const ProfileList = ({ handleValue }) => {
                                 <TableCell key={5} sx={{ color: "#667085" }}>
                                     Mobile Number
                                 </TableCell>
+                                <TableCell key={6} sx={{ color: "#667085" }}>
+                                    Action
+                                </TableCell>
                             </TableRow>
                         </TableHead>
                         <TableBody>
                             {pagination.data.map((row) => (
                                 <TableRow sx={{ cursor: 'pointer' }}
-                                    onClick={() => {
-                                        handleValue(7)
-                                    }} key={row.id}>
+                                    key={row.id}>
                                     <TableCell sx={{ display: 'flex', alignItems: 'center', gap: '1rem' }} component="th" scope="row">
                                         <img className='w-10' src={ProfileImg} alt='prifile-img' />
                                         <span className='text-[#262526] font-semibold'>{row.name}</span>
                                     </TableCell>
                                     <TableCell><span className='text-[#262526] font-semibold'>{row.email}</span></TableCell>
                                     <TableCell><span className='text-[#262526] font-semibold'>{row.phone}</span></TableCell>
+                                    <TableCell key={row.id}>
+                                        <IconButton
+                                            aria-label="more"
+                                            id="long-button"
+                                            aria-controls={open ? "long-menu" : undefined}
+                                            aria-expanded={open ? "true" : undefined}
+                                            aria-haspopup="true"
+                                            onClick={handleClick}
+                                            sx={{
+                                                boxShadow: "0 0 1px 1px rgba(0,0,0,0.2)",
+                                            }}
+                                        >
+                                            <MoreVertIcon />
+                                        </IconButton>
+                                        <Menu
+                                            id="long-menu"
+                                            MenuListProps={{
+                                                "aria-labelledby": "long-button",
+                                            }}
+                                            anchorEl={anchorEl}
+                                            open={open}
+                                            onClose={handleClose}
+                                            PaperProps={{
+                                                style: {
+                                                    maxHeight: ITEM_HEIGHT * 4.5,
+                                                    width: "20ch",
+                                                    boxShadow: "1px 1px 2px 1px rgba(0,0,0,0.11)",
+                                                },
+                                            }}
+                                        >
+                                            <MenuItem
+                                                key={options[0]}
+                                                onClick={handleView}
+                                            >
+                                                {options[0]}
+                                            </MenuItem>
+                                        </Menu>
+                                    </TableCell>
                                 </TableRow>
                             ))}
                         </TableBody>
